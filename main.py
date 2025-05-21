@@ -1,0 +1,54 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return{"message":"Hello FastAPI"}
+
+@app.get("/api/members")
+def get_members():
+    return[
+          {
+            "name": "Kevin Samson",
+            "title": "Founder",
+            "description": "Turning clean code into beautiful experiences.",
+            "image": "/images/team1.jpg",
+            "email": "kevinsamson@gmail.com"
+        },
+        {
+            "name": "Rebecca Williams",
+            "title": "Designer",
+            "description": "I design with empathy and detail in every pixel.",
+            "image": "/images/team2.jpg",
+            "email": "rebeccawilliams@gmail.com"
+        },
+        {
+            "name": "Ben Markson",
+            "title": "Designer/Developer",
+            "description": "I love solving complex problems with simple logic.",
+            "image": "/images/team2.jpg",
+            "email": "benmarkson@gmail.com"
+        },
+        {
+        "name": "Sophia Lin",
+        "title": "UX Strategist",
+        "description": "Designing experiences that actually solve user pain.",
+        "image": "/images/team4.jpg",
+        "email": "sophialin@gmail.com"
+        },
+        {
+        "name": "Noah Wu",
+        "title": "Cloud Architect",
+        "description": "Building scalable systems from the ground up.",
+        "image": "/images/team5.jpg",
+        "email": "noahwu@gmail.com"
+        },
+        { 
+        "name": "Leo Chen",
+        "title": "AI Researcher",
+        "description": "Passionate about machine learning.",
+        "image": "/images/team6.jpg",
+        "email": "leochen@gmail.com"
+        },        
+    ]
