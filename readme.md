@@ -7,3 +7,25 @@
 - 提供一個 GET API：`/api/members`
 - 回傳一組成員資訊（name, title, description, email, image）
 - 可搭配前端透過 JavaScript 使用 fetch() 呼叫並渲染成員卡片
+
+## 🌐 部署結果
+
+### 🔸 後端 API（FastAPI）
+
+- 目前已部署於 Render：  
+  👉 [https://responsive-team-api.onrender.com/api/members](https://responsive-team-api.onrender.com/api/members)
+
+- 提供資料格式範例（JSON）：
+
+```json
+[
+  {
+    "name": "Kevin Samson",
+    "title": "Founder",
+    "description": "Turning clean code into beautiful experiences.",
+    "email": "kevinsamson@gmail.com",
+    "image": "/images/team1.jpg"
+  },
+  ...
+]
+```
