@@ -36,7 +36,7 @@ def get_members():
             "name": "Ben Markson",
             "title": "Designer/Developer",
             "description": "I love solving complex problems with simple logic.",
-            "image": "/images/team2.jpg",
+            "image": "/images/team3.jpg",
             "email": "benmarkson@gmail.com"
         },
         {
