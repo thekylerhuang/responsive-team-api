@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from database import engine
+from models import Base
+from models import Member
 app = FastAPI()
 
 app.add_middleware(
@@ -10,7 +12,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+# 自動建立資料表（只會在第一次時執行）
+Base.metadata.create_all(bind=engine)
 @app.get("/")
 def home():
     return{"message":"Hello FastAPI"}
